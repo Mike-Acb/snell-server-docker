@@ -2,6 +2,13 @@ version: '2.4'
 
 services:
   snell-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILDPLATFORM: linux/amd64
+        TARGETPLATFORM: linux/amd64
+        VERSION: 4.1.1
     image: geekdada/snell-server:4.0.0
     restart: unless-stopped
     networks:
