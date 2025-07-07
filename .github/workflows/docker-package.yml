@@ -37,7 +37,7 @@ jobs:
           context: .
           file: ./Dockerfile
           build-args: |
-            VERSION: ${{ vars.VERSION }}
+            VERSION=${{ vars.VERSION }}
           push: true
           tags: |
             ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
