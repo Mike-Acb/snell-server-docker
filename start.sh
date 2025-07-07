@@ -30,7 +30,7 @@ fi
 
 echo "Generating new config..."
 echo "[snell-server]" >> ${CONF}
-echo "listen = :::${PORT:9102}" >> ${CONF}
+echo "listen = :::${PORT:-9102}" >> ${CONF}
 echo "psk = ${PSK}" >> ${CONF}
 
 run_bin
